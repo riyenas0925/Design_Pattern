@@ -1,14 +1,14 @@
-# Design Pattern
-하루 30분씩 디자인 패턴 공부하기
+# :open_book: Design Pattern
+하루 하나씩 디자인 패턴 공부하기
 
-## Creational
+### Creational
 - [ ] Factory Method 
 - [ ] Abstract Factory
 - [x] [Builder](https://github.com/riyenas0925/Design_Pattern/blob/master/Builder%20Pattern.md)
 - [ ] Prototype 
 - [ ] Singleton
 
-## Structural
+### Structural
 - [ ] Adapter (Class)
 - [ ] Adapter (Object)
 - [ ] Bridge
@@ -18,7 +18,7 @@
 - [ ] Flyweight
 - [ ] Proxy
 
-## Behavioral
+### Behavioral
 - [ ] Interpreter
 - [ ] Template Method
 - [ ] Chain of Responsibility
