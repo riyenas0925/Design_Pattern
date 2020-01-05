@@ -90,9 +90,9 @@ public class Student(){
 
   public Student build() {
     student student = new Student();
-    student.setFirstName("강");
-    student.setLastName("동민");
-    student.setGraduated(true);
+    student.setFirstName(firstName);
+    student.setLastName(lastName);
+    student.setGraduated(graduated);
     return student;
   }
 }
