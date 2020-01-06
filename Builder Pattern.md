@@ -77,7 +77,7 @@ public Student(String firstName, String lastName, boolean graduated) {...}  // �
 public Student(String firstName, String lastName, ) {...}                   // fisrt,lastName만 초기화 하고 싶을때
 public Student(boolean graduated) {...}                                     // graduated만 초기화 하고 싶을때
 ```
-생성자를 이용한 방식은 파라미터의 순서도 매우 중요하고 위치만 봐서는 자료형이 같다면 값이 뒤바뀌어도 문법적으로는 오류가 없기때문에 개발자가 파악하기 힘들다 따라서 ```Builder Pattern```을 사용하여 문제를 해결할수 있다.
+생성자를 이용한 방식은 파라미터의 순서도 매우 중요하고 위치만 봐서는 자료형이 같다면 값이 뒤바뀌어도 문법적으로는 오류가 없기때문에 개발자가 어떤 값을 넣어야 하는지 파악하기 힘들다 따라서 ```Builder Pattern```을 사용하여 문제를 해결할수 있다.
 
 ```java
 //생성자 예시
