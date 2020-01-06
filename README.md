@@ -1,6 +1,10 @@
 # :open_book: Design Pattern
 하루 하나씩 디자인 패턴 공부하기
 
+### :rotating_light: 주의!!
+> :seedling: 글쓴이는 아직 병아리 개발자이기 때문에 잘못알고 있는 내용이 있을수 있습니다!!  
+> 잘못된 내용에 대한 지적은 언제든 환영합니다. (Issue로!!)
+
 ### :tada: Code 실행하기!
 > 예제로 나와있는 모든 코드는 [Java Web IDE](https://www.tutorialspoint.com/compile_java_online.php)에서 실행해보실수 있습니다 ~~
 
