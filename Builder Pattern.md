@@ -19,32 +19,49 @@ Student student = Student.builder()
 *생성자 인자가 많을때 Builder Patter은 효율적이고 유연하게 생성할수 있음!!!*
 
 ### 3. 일반적인 객체 생성
-##### Student.java
-```java
-public class Student(){
-  private String firstName;
-  private String lastName;
-  private boolean graduated;
-  
-  //setter, getter, toString 생략
-}
-```
+##### Main.java
 
-##### StudentTest.java
 ```java
-public class StudentTest {
-  public static void main(String[] args) {
-    Student student = createStudent();
-    System.out.println(student.toString())
-  }
-  
-  public static Student createStudent() {
-    student student = new Student();
-    student.setFirstName("강");
-    student.setLastName("동민");
-    student.setGraduated(true);
-    return student;
-  }
+class Student{
+    private String firstName;
+    private String lastName;
+    private boolean graduated;
+    
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+    public void setGraduated(boolean graduated) {
+        this.graduated = graduated;
+    }
+    
+    @Override
+    public String toString() {
+        return "Student{" +
+                "fisrtName='" + this.firstName + "\'" +
+                ", lastName='" + this.lastName + "\'" +
+                ", graduated='" + this.graduated + "\'" +
+                '}';
+    }
+}
+
+public class Main{
+    public static void main(String []args){
+        Student student = createStudent();
+        System.out.println(student.toString());
+    }
+
+    public static Student createStudent() {
+        Student student = new Student();
+        student.setFirstName("강");
+        student.setLastName("동민");
+        student.setGraduated(true);
+        return student;
+    }
 }
 ```
 
