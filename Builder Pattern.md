@@ -65,10 +65,27 @@ public class Main{
 }
 ```
 
-만약 Student Class에서 firstName, lastName 둘만 초기화 하고싶을수도 있고 graduated만 초기화 하고싶을수 있다 하지만 일반적인 방식은 초기화 하고 싶은 파라미터가 달라지면 그에 맞게 생성자를 새로 만들어줘야하는 문제점이 있고 생성자를 이용한 방식은 파라미터의 순서도 매우 중요하고 위치만 봐서는 자료형만 같다면 값이 뒤바뀌어도 문법적으로는 오류가 없기때문에 개발자가 파악하기 힘들다.
+#### 문제점
+만약 Student Class에서 firstName, lastName 둘만 초기화 하고싶을수도 있고 graduated만 초기화 하고싶을수 있다 하지만 일반적인 방식은 초기화 하고 싶은 파라미터가 달라지면 그에 맞게 생성자를 새로 만들어줘야한다.
+
+```java
+public Student(String firstName, String lastName, boolean graduated) {...}  // 전부다 초기화 하고 싶을때
+public Student(String firstName, String lastName, ) {...}                   // fisrt,lastName만 초기화 하고 싶을때
+public Student(boolean graduated) {...}                                     // graduated만 초기화 하고 싶을때
+```
+생성자를 이용한 방식은 파라미터의 순서도 매우 중요하고 위치만 봐서는 자료형이 같다면 값이 뒤바뀌어도 문법적으로는 오류가 없기때문에 개발자가 파악하기 힘들다 따라서 ```Builder Pattern```을 사용하여 문제를 해결할수 있다.
+
+```java
+//생성자 예시
+public Student(String firstName, String lastName, boolean graduated) {...}
+
+//객체 생성
+Student student = new Student("강", "동민", true); //문법적 오류 x
+Student student = new Student("동민", "강", true); //문법적 오류 x
+```
 
 ### 4. Builder Pattern을 사용한 객체 생성
-##### Student.java
+##### Main.java
 ```java
 class Student{
     private String firstName;
@@ -132,18 +149,13 @@ class StudentBuilder{
 
 public class Main{
     public static void main(String []args){
-        Student student1 = Student.builder()
+        Student student = Student.builder()
           .firstName("강")
           .lastName("동민")
           .graduated(true)
           .build();
-          
-        Student student2 = Student.builder()
-          .firstName("강")
-          .build();
-          
-        System.out.println(student1.toString());
-        System.out.println(student2.toString());
+       
+        System.out.println(student.toString());
     }
 }
 ```
