@@ -34,18 +34,6 @@ class Student{
         this.graduated = graduated;
     }
     
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    
-    public void setGraduated(boolean graduated) {
-        this.graduated = graduated;
-    }
-    
     @Override
     public String toString() {
         return "Student{" +
