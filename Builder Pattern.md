@@ -3,8 +3,9 @@
 ### 1. Builder Pattern 예시
 ```java
 Student student = Student.builder()
-    .name("강동민")
-    .age(19)
+    .firstName("강")
+    .lastName("동민")
+    .graduated(true)
     .build();
 ```
 > 위와같은 패턴을 Dot(.) Chain 문법이라고 한다.
