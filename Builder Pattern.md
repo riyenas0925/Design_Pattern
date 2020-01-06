@@ -28,6 +28,12 @@ class Student{
     private String lastName;
     private boolean graduated;
     
+    public Student(String firstName, String lastName, boolean graduated){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.graduated = graduated;
+    }
+    
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -57,10 +63,7 @@ public class Main{
     }
 
     public static Student createStudent() {
-        Student student = new Student();
-        student.setFirstName("강");
-        student.setLastName("동민");
-        student.setGraduated(true);
+        Student student = new Student("강", "동민", true);
         return student;
     }
 }
