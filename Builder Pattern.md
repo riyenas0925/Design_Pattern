@@ -70,60 +70,80 @@ public class Main{
 ### 4. Builder Pattern을 사용한 객체 생성
 ##### Student.java
 ```java
-public class Student(){
-  private String firstName;
-  private String lastName;
-  private boolean graduated;
+class Student{
+    private String firstName;
+    private String lastName;
+    private boolean graduated;
+    
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+    public void setGraduated(boolean graduated) {
+        this.graduated = graduated;
+    }
+    
+    public static StudentBuilder builder() {
+        return new StudentBuilder();
+    }
   
-  public static Student builder() {
-    return new StudentBuilder();
-  }
-  
-  //setter, toString 생략
+    @Override
+    public String toString() {
+        return "Student{" +
+                "fisrtName='" + this.firstName + "\'" +
+                ", lastName='" + this.lastName + "\'" +
+                ", graduated='" + this.graduated + "\'" +
+                '}';
+    }
 }
-```
 
-##### StudentBuilder.java
-```java
-public class Student(){
-  private String firstName;
-  private String lastName;
-  private boolean graduated;
-  
-  public StudentBuilder firstName(String firstName){
-    this.firstName = firstName;
-    return this;
-  }
-  
-  public StudentBuilder lastName(String lastName){
-    this.lastName = lastName;
-    return this;
-  }
-  
-  public StudentBuilder graduated(boolean graduated){
-    this.graduated = graduated;
-    return this;
-  }
-
-  public Student build() {
-    student student = new Student();
-    student.setFirstName(firstName);
-    student.setLastName(lastName);
-    student.setGraduated(graduated);
-    return student;
-  }
+class StudentBuilder{
+    private String firstName;
+    private String lastName;
+    private boolean graduated;
+    
+    public StudentBuilder firstName(String firstName){
+        this.firstName = firstName;
+        return this;
+    }
+    
+    public StudentBuilder lastName(String lastName){
+        this.lastName = lastName;
+        return this;
+    }
+    
+    public StudentBuilder graduated(boolean graduated){
+        this.graduated = graduated;
+        return this;
+    }
+    
+    public Student build() {
+        Student student = new Student();
+        student.setFirstName(firstName);
+        student.setLastName(lastName);
+        student.setGraduated(graduated);
+        return student;
+    }
 }
-```
 
-##### StudentTest.java
-```java
-public class StudentTest {
-  public static void main(String[] args) {
-    Student student = Student.builder()
-      .name("강동민")
-      .age(19)
-      .build();
-    System.out.println(student.toString())
-  }
+public class Main{
+    public static void main(String []args){
+        Student student1 = Student.builder()
+          .firstName("강")
+          .lastName("동민")
+          .graduated(true)
+          .build();
+          
+        Student student2 = Student.builder()
+          .firstName("강")
+          .build();
+          
+        System.out.println(student1.toString());
+        System.out.println(student2.toString());
+    }
 }
 ```
