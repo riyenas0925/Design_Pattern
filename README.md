@@ -8,21 +8,21 @@
 ### :tada: Code 실행하기!
 > 예제로 나와있는 모든 코드는 [Java Web IDE](https://www.tutorialspoint.com/compile_java_online.php)에서 실행해보실 수 있습니다 ~~
 
-### SOLID
+### 1. SOLID
 * - [ ] SRP - 단일책임의 원칙 : Single Responsibility Principle
 * - [ ] OCP - 개방폐쇄의 원칙 : Open Close Principle
 * - [ ] LSP - 리스코브 치환의 원칙 : The Liskov Substitution Principle
 * - [ ] ISP - 인터페이스 분리의 원칙 : Interface Segregation Principle
 * - [ ] DIP - 의존성역전의 원칙 : Dependency Inversion Principle
 
-### Creational
+### 2. Creational
 * - [ ] Factory Method 
 * - [ ] Abstract Factory
 * - [x] [Builder](https://github.com/riyenas0925/Design_Pattern/blob/master/Builder%20Pattern.md)
 * - [ ] Prototype 
 * - [x] [Singleton](https://github.com/riyenas0925/Design_Pattern/blob/master/Singleton%20Pattern.md)
 
-### Structural
+### 3. Structural
 * - [ ] Adapter (Class)
 * - [ ] Adapter (Object)
 * - [ ] Bridge
@@ -32,7 +32,7 @@
 * - [ ] Flyweight
 * - [ ] Proxy
 
-### Behavioral
+### 4. Behavioral
 * - [ ] Interpreter
 * - [ ] Template Method
 * - [ ] Chain of Responsibility
