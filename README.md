@@ -1,11 +1,11 @@
 # :open_book: Design Pattern
 틈틈히 디자인 패턴 공부하기
 
-### :rotating_light: 주의!!
+## :rotating_light: 주의!!
 > :seedling: 글쓴이는 아직 병아리 개발자이기 때문에 잘못 알고 있는 내용이 있을 수 있습니다!!  
 > 잘못된 내용에 대한 지적은 언제든 환영합니다. (Issue로!!)
 
-### :tada: Code 실행하기!
+## :tada: Code 실행하기!
 > 예제로 나와있는 모든 코드는 [Java Web IDE](https://www.tutorialspoint.com/compile_java_online.php)에서 실행해보실 수 있습니다 ~~
 
 ### 1. SOLID
@@ -44,3 +44,7 @@
 * - [ ] State[](https://github.com/riyenas0925/Design_Pattern/blob/master/State%20Pattern.md)
 * - [ ] Strategy[](https://github.com/riyenas0925/Design_Pattern/blob/master/Strategy%20Pattern.md)
 * - [ ] Visitor
+
+## 참고
+* [한빛 미디어 자바 객체지향 디자인 패턴](http://m.hanbit.co.kr/store/books/book_view.html?p_code=B3400922670)
+* [GoF의 디자인 패턴](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=56051596)
