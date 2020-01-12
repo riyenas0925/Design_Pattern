@@ -18,7 +18,7 @@
 ### 2. Creational
 * - [ ] Factory Method[](https://github.com/riyenas0925/Design_Pattern/blob/master/Factory%20Method%20Pattern.md)
 * - [ ] Abstract Factory
-* - [x] Builder[](https://github.com/riyenas0925/Design_Pattern/blob/master/Builder%20Pattern.md)
+* - [x] [Builder](https://github.com/riyenas0925/Design_Pattern/blob/master/Builder%20Pattern.md)
 * - [ ] Prototype
 * - [ ] Singleton[](https://github.com/riyenas0925/Design_Pattern/blob/master/Singleton%20Pattern.md)
 
