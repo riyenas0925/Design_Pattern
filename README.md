@@ -9,7 +9,7 @@
 > 예제로 나와있는 모든 코드는 [Java Web IDE](https://www.tutorialspoint.com/compile_java_online.php)에서 실행해보실 수 있습니다 ~~
 
 ### 1. SOLID
-* - [ ] SRP - 단일책임의 원칙 : Single Responsibility Principle
+* - [x] [SRP - 단일책임의 원칙 : Single Responsibility Principle](https://github.com/riyenas0925/Design_Pattern/blob/master/Single%20Responsibility%20Principle.md)
 * - [ ] OCP - 개방폐쇄의 원칙 : Open Close Principle
 * - [ ] LSP - 리스코브 치환의 원칙 : The Liskov Substitution Principle
 * - [ ] ISP - 인터페이스 분리의 원칙 : Interface Segregation Principle
