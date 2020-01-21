@@ -10,9 +10,11 @@
 
 ### 1. SOLID
 * - [x] [단일책임의 원칙 (Single Responsibility Principle, SRP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Single%20Responsibility%20Principle.md)
+  * 한 클래스에 너무 많은 책임을 부여하지 말고 단 하나의 책임만 수행하도록해 변경 사유가 될수 있는 것을 하나로 만들어야 한다
 * - [ ] 개방폐쇄의 원칙 (Open Close Principle, OCP)
 * - [ ] 리스코브 치환의 원칙 (The Liskov Substitution Principle, LSP)
 * - [x] [인터페이스 분리의 원칙 (Interface Segregation Principle, ISP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Interface%20Segregation%20Principle.md)
+  * ISP는 인터페이스를 클라이언트에 특화되도록 분리시키라는 원칙
 * - [ ] 의존성역전의 원칙 (Dependency Inversion Principle, DIP)
 
 ### 2. Creational
