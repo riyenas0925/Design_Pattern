@@ -9,11 +9,11 @@
 > 예제로 나와있는 모든 코드는 [Java Web IDE](https://www.tutorialspoint.com/compile_java_online.php)에서 실행해보실 수 있습니다 ~~
 
 ### 1. SOLID
-* - [x] [단일책임의 원칙 (Single Responsibility Principle, SRP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Single%20Responsibility%20Principle.md)
-* - [ ] 개방폐쇄의 원칙 (Open Close Principle, OCP)
-* - [ ] 리스코브 치환의 원칙 (The Liskov Substitution Principle, LSP)
-* - [x] [인터페이스 분리의 원칙 (Interface Segregation Principle, ISP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Interface%20Segregation%20Principle.md)
-* - [ ] 의존성역전의 원칙 (Dependency Inversion Principle, DIP)
+* - [x] [S -단일책임의 원칙 (Single Responsibility Principle, SRP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Single%20Responsibility%20Principle.md)
+* - [ ] O - 개방폐쇄의 원칙 (Open Close Principle, OCP)
+* - [ ] L - 리스코브 치환의 원칙 (The Liskov Substitution Principle, LSP)
+* - [x] I - [인터페이스 분리의 원칙 (Interface Segregation Principle, ISP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Interface%20Segregation%20Principle.md)
+* - [ ] D - 의존성역전의 원칙 (Dependency Inversion Principle, DIP)
 
 ### 2. Creational
 * - [ ] Factory Method[](https://github.com/riyenas0925/Design_Pattern/blob/master/Factory%20Method%20Pattern.md)
