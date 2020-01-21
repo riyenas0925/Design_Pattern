@@ -1,4 +1,4 @@
-# 단일 책임 원칙(SRP : Single Responsibility Principle)
+# 단일 책임 원칙(Single Responsibility Principle, SRP)
 
 <h4 align="center"><I>"한줄 요약 "</I></h4>
 <h6 align="center">한 클래스에 너무 많은 책임을 부여하지 말고 단 하나의 책임만 수행하도록해 변경 사유가 될수 있는 것을 하나로 만들어야 한다</h6>
