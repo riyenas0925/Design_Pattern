@@ -24,10 +24,10 @@
 * SRP에 따라 여러 책임이 아닌 단일 책임을 갖는 여러 클래스로 분할하고 각자의 인터페이스를 제공한다면 ISP도 만족할수 있다.
 * **SRP를 만족하더라도 ISP를 반드시 만족한다고 할 수 없다.**
 
-  ### 예시
-    * 게시판 기능 (Dashboard 클래스, CRUD(Create,Read,Update,Delete) 메서드)
-      * 관리자 : CRUD 사용 가능
-      * 클라이언트 : CRU 사용 가능 (Delete 기능 X)
+##### 예시
+  * 게시판 기능 (Dashboard 클래스, CRUD(Create,Read,Update,Delete) 메서드)
+    * 관리자 : CRUD 사용 가능
+    * 클라이언트 : CRU 사용 가능 (Delete 기능 X)
     
 Dashboard 클래스는 **게시판 기능에 관련된 책임을 지기 때문에 SRP를 만족한다.** 하지만 클라이언트의 입장에서는 Delete 메서드를 사용하지 않아도 Dashboard 클래스의 모든 메서드가 들어가있는 인터페이스를 사용하게 되면 **클라이언트에 상관없이 사용되기 때문에 ISP에 위배 된다.**
 
