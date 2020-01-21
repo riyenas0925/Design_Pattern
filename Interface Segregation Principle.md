@@ -3,7 +3,7 @@
 <h4 align="center"><I>"한줄 요약 "</I></h4>
 <h6 align="center">ISP는 인터페이스를 클라이언트에 특화되도록 분리시키라는 원칙</h6>
 
-## 올바른 인터페이스 분리의 원칙 예시
+## \인터페이스 분리의 원칙
 <p align="center">
 <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5N8oqz9BKujK30sG18iIipB1WaQ6N1nEUSa5XShABpUlFNjr9MlTco02YYzdTBoUjc6joqR5DusRdazTy-RkLlUJDlnjck74bn5pyetNKjmIWDDVDEq1cWYfWekFAOhwEQaffNewjeXEGbc5QRQeipq37J528inrPSMe2XMu48mhHIqa_CBAZKqKSNI4YlGXGgAClDAW88EgNafmD060000" /></p>
 
