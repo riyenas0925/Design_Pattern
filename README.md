@@ -13,7 +13,7 @@
 * - [ ] OCP - 개방폐쇄의 원칙 (Open Close Principle, OCP)
 * - [ ] LSP - 리스코브 치환의 원칙 (The Liskov Substitution Principle, LSP)
 * - [x] [ISP - 인터페이스 분리의 원칙 (Interface Segregation Principle, ISP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Interface%20Segregation%20Principle.md)
-* - [ ] DIP - 의존성역전의 원칙 (Dependency Inversion Principle, DIP)
+* - [x] [DIP - 의존성역전의 원칙 (Dependency Inversion Principle, DIP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Dependency%20Inversion%20Principle.md)
 
 ### 2. Creational
 * - [ ] Factory Method[](https://github.com/riyenas0925/Design_Pattern/blob/master/Factory%20Method%20Pattern.md)
