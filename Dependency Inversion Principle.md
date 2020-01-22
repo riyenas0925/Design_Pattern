@@ -28,11 +28,11 @@
 만약 아래와 같은 예시를 보자
 ```java
 class Kid {
-	private Robot toy;
+    private Robot toy;
 	
-	public void setToy() {
-		this.toy = new Robot("로봇입니다.");
-	}
+    public void setToy() {
+	this.toy = new Robot("로봇입니다.");
+    }
 }
 ```
 만약 위의 코드에서 Robot 클래스의 인자가 String이 아니라 Integer로 바꿔야 한다면 Robot뿐만 아니라 Robot 클래스를 사용하고 있는 Kid 클래스도 같이 변경해줘야 한다.  물론 지금은 Kid 클래스 하나만 변경하면 되지만 만약 Robot 클래스를 사용하고 있는 클래스가 수십가지라면? **연관된 클래스들은 전부 수정해야하는 불상사가 발생하게 된다.**
@@ -41,26 +41,26 @@ class Kid {
 
 ```java
 class Kid {
-	private Robot toy;
-	
-	public void setToy(Robot toy) {
-		this.toy = toy;
-	}
+    private Robot toy;
+
+    public void setToy(Robot toy) {
+	this.toy = toy;
+    }
 }
 ```
 ### DI 에시
 아래와 같이 대상 객체를 변경하지 않고도 외부에서 대상 객체의 외부 의존 객체를 바꿀수 있다.
 ```java
 class Kid {
-	private Toy toy;
-	
-	public void setToy(Toy toy) {
-		this.toy = toy;
-	}
+    private Toy toy;
 
-	public void play() {
-		System.out.println(toy.toString());
-	}
+    public void setToy(Toy toy) {
+	this.toy = toy;
+    }
+
+    public void play() {
+	System.out.println(toy.toString());
+    }
 }
 ```
 새로운 장난감을 가지고 놀고 싶다면 아래와 같이 코드를 작성하면 된다. Kid, Toy등 기존의 코드에 영향을 받지 않고 장난감을 추가할수 있다.
