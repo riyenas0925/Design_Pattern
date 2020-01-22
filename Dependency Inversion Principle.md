@@ -1,3 +1,4 @@
+
 # 의존성역전의 원칙 (Dependency Inversion Principle, DIP)
 
 <h4 align="center"><I>"한줄 요약 "</I></h4>
@@ -22,12 +23,32 @@
 ## 의존성 주입(Dependency Injection)
 의존성 주입이란 **클래스 외부에서 의존되는 것을 대상 객체의 인스턴스 변수**에 주입하는 기술이다.
 
-### 예시
+
+### 일반적인 예시
+만약 아래와 같은 예시를 보자
 ```java
-class Toy {
-    ...
+class Kid {
+	private Robot toy;
+	
+	public void setToy() {
+		this.toy = new Robot("로봇입니다.");
+	}
 }
 ```
+만약 위의 코드에서 Robot 클래스의 인자가 String이 아니라 Integer로 바꿔야 한다면 Robot뿐만 아니라 Robot 클래스를 사용하고 있는 Kid 클래스도 같이 변경해줘야 한다.  물론 지금은 Kid 클래스 하나만 변경하면 되지만 만약 Robot 클래스를 사용하고 있는 클래스가 수십가지라면? **연관된 클래스들은 전부 수정해야하는 불상사가 발생하게 된다.**
+
+하지만 아래와 같이 Robot 클래스를 setter의 인자로 받아버린다면 Robot클래스의 인자를 String으로 받아야 한다는 사실을 Kid클래스가 알 필요가 없어진다. 이처럼 **DI는 의존성 강한 두 클래스를 분리하여 코드 재사용성과 Test를 용이하게 한다.**
+
+```java
+class Kid {
+	private Robot toy;
+	
+	public void setToy(Robot toy) {
+		this.toy = toy;
+	}
+}
+```
+### DI 예시
 아래와 같이 대상 객체를 변경하지 않고도 외부에서 대상 객체의 외부 의존 객체를 바꿀수 있다.
 ```java
 class Kid {
