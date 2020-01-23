@@ -1,16 +1,23 @@
+
 # 개방폐쇄의 원칙 (Open Close Principle, OCP)
 
 <h4 align="center"><I>"한줄 요약 "</I></h4>
 <h6 align="center">OCP란 기존의 코드를 변경하지 않으면서 기능을 추가할 수 있도록 설계가 되어야 한다는 뜻이다.</h6>
 
-## 개방-폐쇄 원칙
+## 개방-폐쇄의 원칙
+
+* 확장에 대해 열려(**개방**) 있다.
+	* 모듈의 동작을 확장할 수 있다는 것을 의미한다. 애플리케이션의 요구 사항이 변경될 때, 이 변경에 맞게 새로운 동작을 추가해 모듈을 확장할 수 있다. 즉, 모듈이 하는 일을 변경할 수 있다.	
+* 변경에 대해 닫혀(**폐쇄**) 있다.
+	* 모듈이 추가, 확장, 변경된다고 해서 기존의 소스코드가 변경되면 안된다.
+
 예를 들어 성적표나 출석부를 출력하는 기능을 SomeClient에서 사용하게끔 만들어보자
 
 <p align="center">
     <img src="http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5N8oqz9BKujK30nG18iIipB1WaQ6N1n9USa5XShl9qwyqtpN2ZdJSl6DmiQtqwS0-K7v-UcEkTafkQLm1Hic_EcPUxhRGrGlX94kuABexyI5nSoJq4t9pMjH5VN3cO3t6m5tT8297647GgwHPdf6M0zSCNOfH7EWBFGJ7L8pKi1XWS0" />
 </p>
 
-만약 성적표, 출석부 외에 도서관 대여 명부를 출력하는 기능을 추가하려면 도서관 대여 명부 클래스를 만들고 SomeClient에서 사용하게끔 하면 된다. 하지만 새로운 기능을 추가하기 위해 **기존의 코드를 변경해야 하기 때문에 OCP를 위반하게 된다.**
+만약 성적표, 출석부 외에 도서관 대여 명부를 출력하는 기능을 추가하려면 도서관 대여 명부 클래스를 만들고 SomeClient에서 사용하게끔 하면 된다. 하지만 **새로운 기능( 도서관 대여 명부 출력)을 추가하기 위해 기존의 코드(SomeClient)를 변경해야 하기 때문에 OCP를 위반하게 된다.**
 
 ## OCP를 만족하는 설계
 위에 설계한 기능을 OCP를 만족하는 설계로 변경해보자 먼저 변하는 것과 변하지 않는 것으로 구분해야한다.
@@ -25,6 +32,7 @@
   </p>
 
 ---
+
 
 ### 참고 Plant UML Code
 
