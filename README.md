@@ -10,7 +10,7 @@
 > UML Diagram 작성은 [PlantUML](http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)을 사용하고 있습니다
 
 ### 1. SOLID
-* - [x] [SRP -단일책임의 원칙 (Single Responsibility Principle, SRP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Single%20Responsibility%20Principle.md)
+* - [x] [SRP - 단일책임의 원칙 (Single Responsibility Principle, SRP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Single%20Responsibility%20Principle.md)
 * - [ ] [OCP - 개방폐쇄의 원칙 (Open Close Principle, OCP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Open%20Close%20Principle.md)
 * - [ ] LSP - 리스코브 치환의 원칙 (The Liskov Substitution Principle, LSP)
 * - [x] [ISP - 인터페이스 분리의 원칙 (Interface Segregation Principle, ISP)](https://github.com/riyenas0925/Design_Pattern/blob/master/Interface%20Segregation%20Principle.md)
