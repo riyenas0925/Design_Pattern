@@ -43,7 +43,7 @@
 * - [ ] Memento
 * - [ ] Observer[](https://github.com/riyenas0925/Design_Pattern/blob/master/Observer%20Pattern.md)
 * - [ ] State[](https://github.com/riyenas0925/Design_Pattern/blob/master/State%20Pattern.md)
-* - [ ] Strategy[](https://github.com/riyenas0925/Design_Pattern/blob/master/Strategy%20Pattern.md)
+* - [ ] [Strategy](https://github.com/riyenas0925/Design_Pattern/blob/master/Strategy%20Pattern.md)
 * - [ ] Visitor
 
 ## 참고
