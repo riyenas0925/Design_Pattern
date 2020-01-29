@@ -51,12 +51,12 @@
   <img src="http://www.plantuml.com/plantuml/png/RP6xReGm44LxVyMKYQ8Waf8Y8aqwf4XRR3qoiwpbXv4VIFpzYYrOFBWzSvWx5_SnOKZP6X6rSZC6jE3yI95c-6eFCA3J6_nkXL0kKRYX9FXD2QM-f829flKm6FoYtBGFfC4OuJyxUMTiK34gGunUqUZpztzcFK9HfaC77_WaR-yTB5wD8CepDiFwXLvpmOBEHfbPsL2Kgjt06dAbikGppqtpmtyktrErzaPCOm_2QzMbdjoOhNa0" />
 </p>
 
-클라이언트에서는 연관 관계를 이용해 이동 기능과 공격 기능의 변화를 포함시킨다. Robot 클래스가 이동기능과 공격 기능을 이용하는 클라이언트 역할을 수행하고, 이클래스는 변화를 처리하기 위해 MovingStrategy와 AttackStrategy 인터페이스를 포함해야 한다.
+클라이언트에서는 연관 관계를 이용해 이동 기능과 공격 기능의 변화를 포함시킨다. Robot 클래스가 이동기능과 공격 기능을 이용하는 클라이언트 역할을 수행하고, 이 클래스는 변화를 처리하기 위해 MovingStrategy와 AttackStrategy 인터페이스를 포함해야 한다.
 
 <p align="center">
   <img src="http://www.plantuml.com/plantuml/png/VP8nJyCm48Lt_mgFgL2g2Z5bGEs2n524A8BvcXx5IcnNzgMe_7hYu3Rn9ShIvjvtVhvdtTeJE6fqBNobp0aSQ6di0JsUvCDg83emLH3lXs9PW_SR8gVs3U5pQSrE_Q9S2I6K8NHVKA9iEPJLZXmG7Yy3iBLdPOutq9d9ryQKtqpRAkzLZKpzXBeQdt-gBsFnpUujnUztmEh7cezORiXg8QwYpFF7s1t0eEn-Gyt7xW4B6aaXSmCQYrPlZzt4k-kLMKVbFrxq_8Zqqf9iKKX-5BgB0ZbRTUXrRSyuLZrIEdAcax9WYQOCqcWP96N1aaU3_bLdudRF77Zuvoor7IUN8fsSlu4KWYt9k2Fiown3NCYP6U9sphGmaxmvBPTyNxZFT1TF5DluLl9OqqrhD8T6rty0" />
 </p>
 
-* Robot 클래스의 입장에서 보면 구체적인 이동 방식과 공격 방식이 MovingStrategy와, AttackStrategy 인터페이스에 의해 캡슐화 되어 있기 때문에 추후에 새로운 이동 방식과 공격방식의 변화뿐만 아니라 현재 변화도 잘 처리할 수 있게 된다.
+* Robot 클래스의 입장에서 보면 **구체적인 이동 방식과 공격 방식이 MovingStrategy와, AttackStrategy 인터페이스에 의해 캡슐화 되어 있기 때문에 추후에 새로운 이동 방식과 공격방식의 변화뿐만 아니라 현재 변화도 잘 처리**할 수 있게 된다.
 
-* 새로운 공격 방식이 개발되어 추가된다고 하더라도 AttackStrategy 인터페이스가 변화에 대한 일종의 방화벽 역할을 수행해 Robot 클래스의 변화를 차단해준다.(OCP를 만족하는 설계)
+* 새로운 공격 방식이 개발되어 추가된다고 하더라도 **AttackStrategy 인터페이스가 변화에 대한 일종의 방화벽 역할을 수행해 Robot 클래스의 변화를 차단**해준다.(OCP를 만족하는 설계)
