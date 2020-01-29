@@ -1,5 +1,9 @@
 # Strategy Pattern
 
+<h4 align="center"><I>"한줄 요약 "</I></h4>
+<h6 align="center">스트래티지 패턴은 같은 문제를 해결하는 여러 알고리즘이 클래스별로 캡슐화되어 있고 이들이 필요할 때 교체할 수 있도록 함으로써 동일한 문제를 다를 알고리즘으로 해결할 수 있게 하는 디자인 패턴</h6>
+
+
 ## 로봇 만들기
 
 아래와 같이 각각 다른 공격과 이동기능이 있는 아톰과 태권 V를 만들어 보자
@@ -34,4 +38,24 @@
 ### 2. 새로운 로봇에 공격/이동 방법을 추가/수정하는 경우
 현재 설계한 클래스 같은 경우는 로봇 자체가 캡슐화 단위 이므로 새로운 로봇을 추가하기가 매우 쉽다. 만약 새로운 로봇인 타요에 태권브이의 미사일 공격을 넣는다면? TaekwonV 클래스와 Tayo 클래스의 attack 메서드가 중복해서 사용되게 된다.
  
-또한 로봇의 이동과 공격 기능은 계속해서 개발될 것이기 때문에 새로운 방식의 이동기능과 공격기능을 로봇에게 제공하려면 현재 시스템에서는 관련된 모든 기능을 수정해야하는 불상사가 발생하게 된다. 그렇다면 위와 같은 문제를 해결하기 위해 어떤 디자인 패턴을 사용 해야 할까?
+또한 로봇의 이동과 공격 기능은 계속해서 개발될 것이기 때문에 새로운 방식의 이동기능과 공격기능을 로봇에게 제공하려면 현재 시스템에서는 관련된 모든 기능을 수정해야하는 불상사가 발생하게 된다.
+
+## 해결책
+
+### 무엇이 변화하였는가?
+로봇 예제에서 변화되면서 문제를 발생시키는 요인은 **로봇의 이동 방식과 공격 방식의 변화**이다 따라서 기존의 로봇이나 새로운 로봇이 이러한 기능을 별다른 코드 변경 없이 제공받거나 기존의 공격이나 이동방식을 다른 공격이나 이동 방식으로 쉽게 변경할 수 있어야 한다.
+> 무엇이 변화되었는지를 찾은 후에 이를 클래스로 캡슐화 한다.
+
+<p align="center">
+  <img src="http://www.plantuml.com/plantuml/png/RP6xReGm44LxVyMKYQ8Waf8Y8aqwf4XRR3qoiwpbXv4VIFpzYYrOFBWzSvWx5_SnOKZP6X6rSZC6jE3yI95c-6eFCA3J6_nkXL0kKRYX9FXD2QM-f829flKm6FoYtBGFfC4OuJyxUMTiK34gGunUqUZpztzcFK9HfaC77_WaR-yTB5wD8CepDiFwXLvpmOBEHfbPsL2Kgjt06dAbikGppqtpmtyktrErzaPCOm_2QzMbdjoOhNa0" />
+</p>
+
+클라이언트에서는 연관 관계를 이용해 이동 기능과 공격 기능의 변화를 포함시킨다. Robot 클래스가 이동기능과 공격 기능을 이용하는 클라이언트 역할을 수행하고, 이클래스는 변화를 처리하기 위해 MovingStrategy와 AttackStrategy 인터페이스를 포함해야 한다.
+
+<p align="center">
+  <img src="http://www.plantuml.com/plantuml/png/VP8nJyCm48Lt_mgFgL2g2Z5bGEs2n524A8BvcXx5IcnNzgMe_7hYu3Rn9ShIvjvtVhvdtTeJE6fqBNobp0aSQ6di0JsUvCDg83emLH3lXs9PW_SR8gVs3U5pQSrE_Q9S2I6K8NHVKA9iEPJLZXmG7Yy3iBLdPOutq9d9ryQKtqpRAkzLZKpzXBeQdt-gBsFnpUujnUztmEh7cezORiXg8QwYpFF7s1t0eEn-Gyt7xW4B6aaXSmCQYrPlZzt4k-kLMKVbFrxq_8Zqqf9iKKX-5BgB0ZbRTUXrRSyuLZrIEdAcax9WYQOCqcWP96N1aaU3_bLdudRF77Zuvoor7IUN8fsSlu4KWYt9k2Fiown3NCYP6U9sphGmaxmvBPTyNxZFT1TF5DluLl9OqqrhD8T6rty0" />
+</p>
+
+* Robot 클래스의 입장에서 보면 구체적인 이동 방식과 공격 방식이 MovingStrategy와, AttackStrategy 인터페이스에 의해 캡슐화 되어 있기 때문에 추후에 새로운 이동 방식과 공격방식의 변화뿐만 아니라 현재 변화도 잘 처리할 수 있게 된다.
+
+* 새로운 공격 방식이 개발되어 추가된다고 하더라도 AttackStrategy 인터페이스가 변화에 대한 일종의 방화벽 역할을 수행해 Robot 클래스의 변화를 차단해준다.(OCP를 만족하는 설계)
